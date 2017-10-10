@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/lightnavy320"
+    android:orientation="vertical" >
+    
+   
+      <RelativeLayout
+            android:id="@+id/wrap_over"
+		    android:layout_height="wrap_content"
+		    android:layout_width="match_parent"
+		    android:orientation="vertical"
+		    android:background="#00000000"
+		    android:layout_marginTop="30dp">
+
+		  	<Button
+					android:id="@+id/startButton"
+					android:layout_height="50dp"
+					android:layout_width="50dp"
+					android:layout_centerHorizontal="true"
+					android:background="@drawable/logo"
+				    android:layout_marginLeft="20dp" >
+		  	</Button>
+
+			 <ListView
+				 android:layout_marginTop="50dp"
+				 android:id="@+id/SelectionList"
+				 android:layout_width="220dp"
+				 android:layout_height="220dp"
+				 android:layout_below="@+id/startButton"
+				 android:divider="@drawable/lightnavy320"
+				 android:background="#003D39"
+				 android:layout_centerHorizontal="true"
+				 android:dividerHeight="4dp" >
+			 </ListView>
+  		</RelativeLayout>
+
+
+		<LinearLayout
+			android:id="@+id/SmsButtonSection"
+			android:layout_width="wrap_content"
+			android:orientation="horizontal"
+	        android:layout_below="@+id/wrap_over"
+			android:layout_height="40dp"
+			android:layout_marginTop="20dp"
+			android:layout_centerHorizontal="true">
+
+			<Button
+				android:id="@+id/resetButton"
+				android:layout_width="85dp"
+				android:layout_height="40dp"
+				android:text="Reset Lists"
+				android:textColor="#FFFFFF"
+				android:textSize="14sp"
+				android:background="@drawable/btn_grey"
+				android:layout_marginRight="10dp">
+			</Button>
+
+			<Button
+				android:id="@+id/smsButton"
+				android:layout_width="85dp"
+				android:layout_height="40dp"
+				android:background="@drawable/sms_bubble_icon"
+				android:layout_centerHorizontal="true"
+				android:layout_marginRight="10dp">
+			</Button>
+
+			<Button
+				android:id="@+id/closeButton"
+				android:layout_width="85dp"
+				android:layout_height="40dp"
+				android:text="Close App"
+				android:textSize="14sp"
+				android:textColor="#FFFFFF"
+				android:background="@drawable/btn_grey">
+			</Button>
+
+		</LinearLayout>
+
+	<TextView
+		    android:id="@+id/Professional_Series"  
+		    android:layout_height="35dp"
+		    android:layout_width="fill_parent"
+		    android:gravity="right"
+		    android:layout_marginRight="15dp"
+		    android:textSize="13sp"
+		    android:textStyle="italic"
+		    android:layout_marginBottom="10dp"
+		    android:text="Amai Apps\nProfessional Series"
+		    android:layout_alignParentBottom="true"
+		    android:textColor="#000000"
+		    android:background="#00000000" >	
+   </TextView>  
+</RelativeLayout>

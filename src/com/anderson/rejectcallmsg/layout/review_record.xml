@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:id="@+id/modify_header"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/orange">
+
+        <Button
+            android:id="@+id/okButton"
+            android:background="@drawable/back_button"
+            android:layout_width="36dp"
+            android:layout_height="36dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp">
+        </Button>
+
+        <TextView
+            android:id="@+id/headerName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Review Record"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:typeface="sans"/>
+
+        <Button
+            android:id="@+id/modifyButton"
+            android:layout_width="36dp"
+            android:layout_height="36dip"
+            android:background="@drawable/modify_icon"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp">
+        </Button>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/EditViewer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/modify_header"
+        android:orientation="vertical"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp">
+
+        <TextView
+            android:id="@+id/numberLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:background="#00000000">"
+        </TextView>
+
+        <TextView
+            android:id="@+id/messageBar"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textSize="16dp"
+            android:gravity="left|bottom"
+            android:text="Returned Message:"
+            android:textColor="@color/orange"
+            android:background="#00000000">
+        </TextView>
+
+        <TextView
+            android:id="@+id/messageBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="160"
+            android:textSize="13dp"
+            android:gravity="left|top"
+            android:textColor="@color/text_black"
+            android:background="#00000000">
+        </TextView>
+    </LinearLayout>
+
+</RelativeLayout>
+

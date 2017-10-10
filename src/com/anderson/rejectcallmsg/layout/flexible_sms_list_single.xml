@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/out_sms">
+
+    <RelativeLayout
+         android:id="@+id/firstSection"
+         android:layout_width="fill_parent"
+         android:layout_height="30dp"
+         android:orientation="horizontal"
+         android:layout_marginTop="4dp"
+         android:background="#00000000">
+
+        <TextView
+            android:id="@+id/in_or_out"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft= "9dp" />
+
+
+        <TextView
+            android:id="@+id/addressText"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_black"
+            android:textSize="14sp"
+            android:text="000000000000"
+            android:layout_centerVertical="true"
+            android:layout_marginRight= "10dp"
+            android:layout_toRightOf="@+id/in_or_out" />
+
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_black"
+            android:textSize="14sp"
+            android:text="Jan 25"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/addressText"
+            android:layout_marginRight= "20dp"/>
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/next" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/secondSection"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#00000000"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp" >
+
+        <Button
+            android:id="@+id/zoomTextButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/zoom_icon" />
+
+        <TextView
+            android:id="@+id/smsText"
+            android:layout_width="220dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:textSize="14sp"
+            android:text="Will fuck you tonight...."
+            android:gravity="center_vertical|left"
+            android:layout_toRightOf="@+id/zoomTextButton"
+            android:textColor="@color/text_black"
+            android:background="#00000000"/>
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/delete_icon" />
+
+    </RelativeLayout>
+
+</LinearLayout>

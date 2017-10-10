@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/lightblue_background"
+    android:orientation="vertical" >
+   
+    	
+   	  <RelativeLayout android:layout_width="fill_parent" 
+        android:id="@+id/topHeaderLayout" 
+        android:background="@color/orange"
+        android:layout_height="50dp"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal">
+
+   			<TextView
+		      android:id="@+id/header"
+		      android:layout_width="wrap_content"
+		      android:layout_height="fill_parent"
+		      android:layout_alignParentTop="true"
+			  android:layout_alignParentLeft="true"
+		      android:gravity="center"
+		      android:textColor="@color/white"
+		      android:textSize="18sp"
+		      android:typeface="sans"
+			  android:layout_marginLeft="20dp" />
+
+		  <Button android:id="@+id/backButton"
+			  android:layout_width="30dp"
+			  android:layout_height="28dp"
+			  android:layout_toLeftOf="@+id/button_reset"
+			  android:layout_marginRight="30dp"
+			  android:layout_centerVertical="true"
+			  android:background="@drawable/back_button">
+		  </Button>
+
+		  <Button android:id="@+id/button_reset"
+			  android:layout_width="30dp"
+			  android:layout_height="30dp"
+			  android:layout_alignParentRight="true"
+			  android:layout_marginRight="20dp"
+			  android:layout_centerVertical="true"
+			  android:background="@drawable/reset_up">
+		  </Button>
+
+	</RelativeLayout>
+   				 
+   <ScrollView
+    	      android:id="@+id/ScrollView"
+    	      android:layout_width="match_parent"
+    	      android:layout_height="340dp"
+    	      android:layout_marginTop="20dp"
+    	      android:layout_below="@+id/topHeaderLayout"
+	   android:fillViewport="false">
+    	      
+       <LinearLayout
+                android:id="@+id/WrappedView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+   		   	    android:layout_marginRight="10dip"
+                android:orientation="vertical">
+                
+            <LinearLayout
+                android:id="@+id/GmailAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                >
+			<TextView 
+			            android:id="@+id/GMailAddressHeader"
+			       		android:layout_height="30dip"
+						android:layout_width="112dp"
+						android:background="#00000000"
+						android:text="Phone Number: "
+					    android:layout_marginRight="10dp"
+						android:textColor="@color/white"
+				        android:gravity="right|center_vertical"
+						android:textSize="15sp">
+		  </TextView>
+					
+		  <EditText 
+				    	android:id="@+id/GmailAddressEntry"
+						android:layout_height="30dp" 
+						android:layout_width="160dp"
+						android:textSize="15sp"	
+						android:background="@drawable/edit_txt_bg"
+						android:hint="11 digit number"
+						android:gravity="center"
+						android:maxLength="13"
+						android:inputType="number"
+						android:textColor="@color/text_black"
+						android:textColorHint="@color/text_hint_color_light_gray">
+					
+		</EditText>
+                   	
+     </LinearLayout>
+           
+        
+    	 <LinearLayout
+                android:id="@+id/BlockUntilSection"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dip"
+                android:layout_marginBottom="10dip"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                >
+		  
+    	     <TextView
+		    	        android:id="@+id/BlockUntil"
+		    	        android:text="Block Until: "
+		    	        android:layout_width="112dp"
+		    	        android:layout_height="30dp"
+		    	        android:background="#00000000"
+		    	        android:gravity="right|center_vertical"
+		    	        android:textColor="@android:color/white"
+		    	        android:textSize="15sp"
+		    	        android:layout_marginRight="10dp"
+		    	        android:typeface="sans"/>
+    	     
+    	     
+    	      <LinearLayout
+		          android:id="@+id/BlockedUntil"
+		          android:layout_width="160dp"
+			      android:orientation="horizontal"
+			      android:layout_height="30dp"
+			      android:layout_gravity="center_horizontal"
+			      android:background="@drawable/edit_txt_bg">
+			        <EditText
+				    	    android:id="@+id/Month"
+				    	    android:layout_width="43dp"
+				    	    android:layout_height="30dip"
+				    	    android:background="#00000000"
+				    	    android:gravity="center"
+				    	    android:hint="MM"
+				    	    android:inputType="number"
+				    	    android:maxLength="2"
+				    	    android:textColor="@color/text_black"
+				    	    android:textColorHint="@color/text_hint_color_light_gray"
+				    	    android:textSize="15sp"
+				    	    android:paddingLeft="5dp"
+				    	    android:typeface="sans" >
+    					</EditText>
+			      
+    	          
+			            <TextView android:layout_gravity="center"  
+						    android:id="@+id/panel" 
+						    android:gravity="center" 
+						    android:textColor="@color/black" 
+						    android:layout_height="fill_parent" 
+						    android:layout_width="10dp" 
+						    android:text="/"
+						    android:background="#00000000"
+						    android:typeface="sans"
+						    android:textSize="15sp">
+						    
+						</TextView>
+							
+							 <EditText
+				    	    android:id="@+id/Date"
+				    	    android:layout_width="33dp"
+				    	    android:layout_height="30dp"
+				    	    android:background="#00000000"
+				    	    android:gravity="center"
+				    	    android:hint="DD"
+				    	    android:inputType="number"
+				    	    android:maxLength="2"
+				    	    android:textColor="@color/text_black"
+				    	    android:textColorHint="@color/text_hint_color_light_gray"
+				    	    android:textSize="15sp"
+				    	    android:typeface="sans" >
+    					</EditText>
+	
+							 
+						<TextView android:layout_gravity="center" 
+						    android:id="@+id/panel_2" 
+						    android:gravity="center" 
+						    android:textColor="@color/black" 
+						    android:layout_height="fill_parent" 
+						    android:layout_width="10dp" 
+						    android:text="/"
+						    android:background="#00000000"
+						    android:typeface="sans"
+						    android:textSize="15sp">
+						    
+						</TextView>
+						
+						<EditText
+				    	    android:id="@+id/Year"
+				    	    android:layout_width="64dp"
+				    	    android:layout_height="30dip"
+				    	    android:background="#00000000"
+				    	    android:gravity="center"
+				    	    android:hint="YYYY"
+				    	    android:paddingRight="7dp"
+				    	    android:inputType="number"
+				    	    android:maxLength="4"
+				    	    android:textColor="@color/text_black"
+				    	    android:textColorHint="@color/text_hint_color_light_gray"
+				    	    android:textSize="15sp"
+				    	    android:typeface="sans" >
+    					</EditText>			
+    					
+			</LinearLayout>   
+    	    
+    	  
+    	   </LinearLayout>
+    	
+    	 <LinearLayout
+		          android:id="@+id/Indicated_image_section"
+		          android:layout_width="320dp"
+		          android:layout_gravity="center_horizontal"
+			      android:orientation="vertical"
+			      android:layout_height="wrap_content">
+    	   <LinearLayout
+		          android:id="@+id/option_section"
+		          android:layout_width="320dp"
+		          android:layout_gravity="center_vertical"
+			      android:orientation="horizontal"
+			      android:layout_height="30dp">
+             <LinearLayout
+		          android:id="@+id/Indicated_option_section"
+		          android:layout_width="130dp"
+		          android:layout_gravity="center"
+		          android:layout_marginLeft="5dp"
+				  android:layout_marginRight="5dp"
+			      android:orientation="horizontal"
+			      android:layout_height="30dp">
+						
+                 <TextView
+		    	        android:id="@+id/SMSOptionBar"
+		    	        android:layout_width="92dp"
+		    	        android:layout_height="fill_parent"
+		    	        android:background="#00000000"
+		    	        android:gravity="center_vertical|right"
+	    	           android:text= "Block SMS: "
+	    	           android:textColor="@android:color/white"
+	    	           android:textSize="15sp"
+	    	           android:typeface="sans" />
+                 
+    	        <Button
+	           	 	android:id="@+id/SmsOptionNo"
+	            	android:layout_width="25dp"
+	            	android:layout_height="25dp"
+	            	android:layout_marginLeft="5dp"
+	            	android:background="@drawable/icon_unchecked"
+	            	android:layout_gravity="center_vertical">
+   			   </Button>
+   			   
+    	         <Button
+	           	 	android:id="@+id/SmsOptionYes"
+	            	android:layout_width="25dp"
+	            	android:layout_height="25dp"
+	            	android:layout_marginLeft="5dp"
+	            	android:background="@drawable/smscur"
+	            	android:layout_gravity="center_vertical"
+	            	android:visibility="gone">
+   			   </Button>
+			 </LinearLayout>
+
+    	<LinearLayout
+		          android:id="@+id/SmsSelection"
+		          android:layout_width="wrap_content"
+			      android:orientation="horizontal"
+			      android:layout_height="30dp"
+			      android:layout_gravity="center_horizontal">
+
+    	          <TextView
+    	             android:id="@+id/SmsSelectionBar"
+    	             android:layout_width="140dp"
+    	             android:layout_height="30dp"
+    	             android:background="#00000000"
+    	             android:gravity="center"
+    	             android:text=" Respond with text:"
+    	             android:textColor="@android:color/white"
+    	             android:textSize="15sp"
+    	             android:typeface="sans" />
+    	       
+    	        <LinearLayout
+		          android:id="@+id/SmsButtonSection"
+		          android:layout_width="35dp"
+			      android:orientation="horizontal"
+			      android:layout_height="30dp"
+			      >
+    	       
+    	        <Button
+	           	 	android:id="@+id/SmsIndicatorNo"
+	            	android:layout_width="25dp"
+	            	android:layout_height="25dp"
+	            	android:background="@drawable/icon_unchecked"
+	            	android:layout_gravity="right">
+   			   </Button>
+   			   
+    	         <Button
+	           	 	android:id="@+id/SmsIndicatorYes"
+	            	android:layout_width="25dp"
+	            	android:layout_height="25dp"
+	            	android:background="@drawable/smscur"
+	            	android:layout_gravity="center_vertical"
+	            	android:visibility="gone">
+   			   </Button>
+   			 </LinearLayout>
+   			  </LinearLayout> 
+    	    </LinearLayout>   
+    	  </LinearLayout>   
+    	    
+             
+    	  <ScrollView
+    	      android:id="@+id/ScrollMsgView"
+    	      android:layout_width="fill_parent"
+    	      android:layout_height="80dp"
+			  android:layout_marginTop="15dp"
+			  android:layout_marginLeft="10dp"
+			  android:layout_marginRight="10dp"
+    	      android:layout_gravity="center_horizontal"
+			  android:visibility="gone">
+
+    	      <EditText
+    	          android:id="@+id/YourMessage"
+    	          android:layout_width="match_parent"
+    	          android:layout_height="wrap_content"
+    	          android:background="@drawable/msg_out_bg"
+    	          android:gravity="left|top"
+    	          android:inputType="textMultiLine"
+    	          android:maxLength="160"
+    	          android:hint="Your message, 160 chracters max ..."
+    	          android:padding="10dp"
+    	          android:textColor="@color/text_black"
+    	          android:textColorHint="@color/grey"
+    	          android:textSize="13sp"
+    	          android:typeface="sans">
+    	      </EditText>
+    	  </ScrollView>
+
+      </LinearLayout> 
+    </ScrollView>
+
+		<Button android:id="@+id/submitButton"
+			android:layout_width="44dp"
+			android:layout_height="44dp"
+			android:layout_alignParentBottom="true"
+			android:layout_centerHorizontal="true"
+			android:background="@drawable/submit_icon">
+		</Button>
+
+	</RelativeLayout>  
+	
+	

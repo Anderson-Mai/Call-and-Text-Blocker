@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="210dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="15dp">
+
+        <TextView
+            android:id="@+id/msg_Address"
+            android:layout_width="210dp"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"
+            android:typeface="sans"
+            android:textColor="#000000"
+            android:gravity="center_vertical|left"/>
+
+        <TextView
+            android:id="@+id/msg_Date"
+            android:layout_width="80dp"
+            android:text= "FEB 24"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"
+            android:typeface="sans"
+            android:textColor="#000000"
+            android:gravity="top|right">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/msg_Body"
+            android:layout_width="210dp"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:typeface="sans"
+            android:textColor="#000000"
+            android:gravity="top|left">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_width="80dp">
+
+
+
+        <Button
+            android:id="@+id/huhu"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="top|right">
+
+        </Button>
+
+        <TextView
+            android:id="@+id/msg_Out"
+            android:layout_width="80dp"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"
+            android:typeface="sans"
+            android:textColor="#000000"
+            android:text= "sms_icon"
+            android:gravity="top|right"/>
+    </LinearLayout>
+
+</RelativeLayout>

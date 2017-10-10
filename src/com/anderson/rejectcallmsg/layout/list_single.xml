@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+         android:layout_height="100dp"
+         android:orientation="horizontal"
+         android:background="#00000000">
+
+        <TextView
+            android:id="@+id/data_txt"
+            android:layout_width="240dp"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_black"
+            android:autoLink="all"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/makecallButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/deleteButton"
+            android:background="@drawable/make_call"
+            android:layout_marginRight= "15dp"/>
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/delete_icon" />
+
+   </RelativeLayout>
+</LinearLayout>

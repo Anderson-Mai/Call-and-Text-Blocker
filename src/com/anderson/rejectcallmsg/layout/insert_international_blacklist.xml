@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="#FFFFFF"
+	android:orientation="vertical">
+	<!-- android:background="#007B76" -->
+
+	<RelativeLayout
+			  android:layout_width="fill_parent"
+			  android:id="@+id/topHeaderLayout"
+			  android:background="@drawable/blue320"
+			  android:layout_height="50dp"
+			  android:layout_marginTop="2dp"
+			  android:orientation="horizontal">
+
+		<TextView
+			android:id="@+id/header"
+			android:layout_width="wrap_content"
+			android:layout_height="fill_parent"
+			android:gravity="center"
+			android:text="World Blacklist Entry"
+			android:textColor="@color/white"
+			android:layout_centerHorizontal="true"
+			android:textSize="18sp"
+			android:layout_alignParentLeft="true"
+			android:layout_marginLeft="20dp"
+			android:typeface="sans" />
+
+		<Button
+			android:id="@+id/homeButton"
+			android:layout_width="30dp"
+			android:layout_height="28dp"
+			android:background="@drawable/back_button"
+			android:layout_marginRight="20dp"
+			android:layout_toLeftOf="@+id/button_wraper"
+			android:layout_centerVertical="true">
+		</Button>
+
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:id="@+id/button_wraper"
+				android:background="#00000000"
+				android:layout_height="30dp"
+				android:layout_centerVertical="true"
+				android:layout_alignParentRight="true"
+				android:orientation="horizontal">
+
+				<Button
+					android:id="@+id/button_add"
+					android:layout_width="30dp"
+					android:layout_height="30dp"
+					android:background="@drawable/add_to_list_icon_orange"
+					android:layout_marginRight="20dp"
+					android:visibility="gone">
+				</Button>
+
+				<Button
+					android:id="@+id/button_reset"
+					android:layout_width="30dp"
+					android:layout_height="30dp"
+					android:background="@drawable/reset_up"
+					android:gravity="center"
+					android:text="R"
+					android:textSize="20sp"
+					android:typeface="sans"
+					android:visibility="gone"
+					android:layout_marginRight="20dp"
+					android:textColor="@color/white">
+				</Button>
+
+				<Button
+					android:id="@+id/list_menu"
+					android:layout_width="30dp"
+					android:layout_height="30dp"
+					android:layout_marginRight="20dp"
+					android:background="@drawable/menu_icon">
+				</Button>
+			</LinearLayout>
+		</RelativeLayout>
+	
+	 <ScrollView  android:id="@+id/ScrollSection"
+	         android:layout_width="fill_parent"
+	         android:layout_height="300dp"
+	         android:layout_centerHorizontal="true"
+	         android:layout_marginTop="20dp"
+	         android:layout_below="@+id/topHeaderLayout">
+		  
+      <LinearLayout
+                android:id="@+id/WrappedView"
+                android:layout_width="302dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:orientation="vertical"
+                >
+            <LinearLayout
+                android:id="@+id/ContactName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+                >
+    	    	<TextView
+	    	        android:id="@+id/NameEntryBar"
+	    	        android:text="Name:"
+	    	        android:layout_width="130dp"
+	    	        android:layout_height="30dip"
+	    	        android:background="#00000000"
+	    	        android:gravity="right|center_vertical"
+	    	        android:paddingRight="12dp"
+	    	        android:textColor="@color/text_black"
+	    	        android:textSize="15sp"
+	    	        android:typeface="sans"/>
+
+	    	    <EditText
+			    	    android:id="@+id/NameEntry"
+			    	    android:layout_width="160dp"
+			    	    android:layout_height="30dp"
+			    	    android:background="@drawable/edit_txt_bg"
+			    	    android:gravity="center"
+			    	    android:hint="Name"
+			    	    android:inputType="text"
+			    	    android:maxLength="20"
+			    	    android:textColor="@color/text_black"
+			    	    android:textColorHint="@color/grey"
+			    	    android:textSize="15sp"
+			    	    android:typeface="sans">
+	    		</EditText>
+    	  	</LinearLayout>
+    	
+                
+          	<LinearLayout
+                android:id="@+id/GmailAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                >
+				<TextView
+			            android:id="@+id/GMailAddressHeader"
+			       		android:layout_height="30dip"
+						android:layout_width="130dp"
+						android:background="#00000000"
+						android:text="Phone number:"
+						android:textColor="@color/text_black"
+					    android:paddingRight="12dp"
+						android:gravity="right|center_vertical"
+						android:textSize="15sp">
+		  		</TextView>
+					
+		  		<EditText 
+				    	android:id="@+id/GmailAddressEntry"
+						android:layout_height="30dp" 
+						android:layout_width="160dp"
+						android:textSize="15sp"	
+						android:background="@drawable/edit_txt_bg"
+						android:hint="eleven digits"
+						android:gravity="center"
+						android:maxLength="18"
+						android:inputType="number"
+						android:textColor="@color/text_black"
+						android:textColorHint="@color/grey">
+					
+				</EditText>
+                   	
+ 			</LinearLayout>
+ 
+           <LinearLayout
+                android:id="@+id/NumberConfirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+                >
+    	    	<TextView
+	    	        android:id="@+id/NameEntryHeader"
+	    	        android:text="Confirm number:"
+	    	        android:layout_width="130dp"
+	    	        android:layout_height="30dip"
+	    	        android:background="#00000000"
+	    	        android:gravity="right|center_vertical"
+					android:paddingRight="12dp"
+	    	        android:textColor="@color/text_black"
+	    	        android:textSize="15sp"
+	    	        android:typeface="sans"/>
+
+    	    
+    	    	<EditText
+		    	    android:id="@+id/ConfirmAddressEntry"
+		    	    android:layout_width="160dp"
+		    	    android:layout_height="30dp"
+		    	    android:background="@drawable/edit_txt_bg"
+		    	    android:gravity="center"
+		    	    android:hint="eleven digits"
+		    	    android:inputType="number"
+		    	    android:maxLength="18"
+		    	    android:textColor="@color/text_black"
+		    	    android:textColorHint="@color/grey"
+		    	    android:textSize="15sp"
+		    	    android:typeface="sans">
+    			</EditText>
+    		</LinearLayout>
+    	
+           <LinearLayout
+                android:id="@+id/BlockUntilSection"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dip"
+                android:layout_marginBottom="10dip"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                >
+    			<TextView
+		    	        android:id="@+id/BlockUntil"
+		    	        android:text="Blocked Until:    "
+		    	        android:layout_width="130dp"
+		    	        android:layout_height="30dp"
+		    	        android:background="#00000000"
+		    	        android:gravity="right|center_vertical"
+		    	        android:textColor="@color/text_black"
+		    	        android:textSize="15sp"
+		    	        android:typeface="sans"/>
+    	    
+    	  		<LinearLayout
+			          android:id="@+id/BlockedUntil"
+			          android:layout_width="160dp"
+				      android:orientation="horizontal"
+				      android:layout_height="30dp"
+				      android:layout_gravity="center_horizontal"
+				      android:background="@drawable/edit_txt_bg">
+			          
+			           <EditText
+				    	    android:id="@+id/Month"
+				    	    android:layout_width="43dp"
+				    	    android:layout_height="30dip"
+				    	    android:background="#00000000"
+				    	    android:gravity="center"
+				    	    android:hint="MM"
+				    	    android:inputType="number"
+				    	    android:maxLength="2"
+				    	    android:textColor="@color/text_black"
+				    	    android:textColorHint="@color/grey"
+				    	    android:textSize="15sp"
+				    	    android:paddingLeft="5dp"
+				    	    android:typeface="sans" 
+				    	    android:enabled="false">
+    					</EditText>
+			          
+			            <TextView android:layout_gravity="center"  
+						    android:id="@+id/panel" 
+						    android:gravity="center" 
+						    android:textColor="@color/black" 
+						    android:layout_height="fill_parent" 
+						    android:layout_width="10dp" 
+						    android:text="/"
+						    android:background="#00000000"
+						    android:typeface="sans"
+						    android:textSize="15sp">
+						</TextView>
+							
+						<EditText
+				    	    android:id="@+id/Date"
+				    	    android:layout_width="33dp"
+				    	    android:layout_height="30dp"
+				    	    android:background="#00000000"
+				    	    android:gravity="center"
+				    	    android:hint="DD"
+				    	    android:inputType="number"
+				    	    android:maxLength="2"
+				    	    android:textColor="@color/text_black"
+				    	    android:textColorHint="@color/grey"
+				    	    android:textSize="15sp"
+				    	    android:typeface="sans"
+				    	    android:enabled="false" >
+    					</EditText>
+	 
+						<TextView android:layout_gravity="center" 
+						    android:id="@+id/panel_2" 
+						    android:gravity="center" 
+						    android:textColor="@color/black" 
+						    android:layout_height="fill_parent" 
+						    android:layout_width="10dp" 
+						    android:text="/"
+						    android:background="#00000000"
+						    android:typeface="sans"
+						    android:textSize="15sp">
+						</TextView>
+						
+						<EditText
+				    	    android:id="@+id/Year"
+				    	    android:layout_width="64dp"
+				    	    android:layout_height="30dip"
+				    	    android:background="#00000000"
+				    	    android:gravity="center"
+				    	    android:hint="YYYY"
+				    	    android:paddingRight="7dp"
+				    	    android:inputType="number"
+				    	    android:maxLength="4"
+				    	    android:textColor="@color/text_black"
+				    	    android:textColorHint="@color/grey"
+				    	    android:textSize="15sp"
+				    	    android:typeface="sans" 
+				    	    android:enabled="false">
+    					</EditText>			
+    					
+					</LinearLayout>   
+    	  	 </LinearLayout>
+    	    <LinearLayout
+		          android:id="@+id/Indicated_image_section"
+		          android:layout_width="320dp"
+		          android:layout_gravity="center_horizontal"
+			      android:orientation="horizontal"
+			      android:layout_height="30dp">
+				 <LinearLayout
+					  android:id="@+id/Indicated_option_section"
+					  android:layout_width="130dp"
+					  android:layout_marginLeft="5dp"
+					  android:layout_gravity="center_vertical"
+					  android:orientation="horizontal"
+					  android:layout_height="30dp">
+
+					 <TextView
+						   android:id="@+id/SMSOptionBar"
+						   android:layout_width="100dp"
+						   android:layout_height="fill_parent"
+						   android:background="#00000000"
+						   android:gravity="center"
+						   android:text= "Block SMS:"
+						   android:textColor="@color/text_black"
+						   android:textSize="15sp"
+						   android:typeface="sans" />
+
+					<Button
+						android:id="@+id/SmsOptionNo"
+						android:layout_width="25dp"
+						android:layout_height="25dp"
+						android:background="@drawable/icon_unchecked"
+						android:layout_gravity="center_vertical">
+				   </Button>
+
+					 <Button
+						android:id="@+id/SmsOptionYes"
+						android:layout_width="25dp"
+						android:layout_height="25dp"
+						android:background="@drawable/smscur"
+						android:layout_gravity="center_vertical"
+						android:visibility="gone">
+				   </Button>
+				  </LinearLayout>
+
+				   <LinearLayout
+						  android:id="@+id/SmsSelection"
+						  android:layout_width="wrap_content"
+						  android:orientation="horizontal"
+						  android:layout_height="30dp"
+						  android:layout_gravity="center_horizontal">
+
+						   <TextView
+							   android:id="@+id/SmsSelectionBar"
+							   android:layout_width="135dp"
+							   android:layout_height="30dp"
+							   android:background="#00000000"
+							   android:gravity="right|center_vertical"
+							   android:text="Respond with text:"
+							   android:textColor="@color/text_black"
+							   android:textSize="15sp"
+							   android:typeface="sans" />
+
+							<LinearLayout
+							  android:id="@+id/SmsButtonSection"
+							  android:layout_width="130dp"
+							  android:orientation="horizontal"
+							  android:layout_height="25dp"
+							  >
+
+								<Button
+									android:id="@+id/SmsIndicatorNo"
+									android:layout_width="25dp"
+									android:layout_marginLeft="10dp"
+									android:layout_height="25dp"
+									android:background="@drawable/icon_unchecked"
+									android:layout_gravity="center_vertical">
+							   </Button>
+
+								 <Button
+									android:id="@+id/SmsIndicatorYes"
+									android:layout_width="25dp"
+									android:layout_height="25dp"
+									android:layout_marginLeft="10dp"
+									android:background="@drawable/smscur"
+									android:layout_gravity="center_vertical"
+									android:visibility="gone">
+							   </Button>
+					 	 </LinearLayout>
+			  </LinearLayout>
+    	  </LinearLayout>
+    	  
+    	   <ScrollView  android:id="@+id/ScrollMsgView"
+	         android:layout_width="302dp"
+	         android:layout_height="110dp"
+	         android:layout_gravity="center_horizontal"
+	         android:layout_marginTop="5dp"
+	         android:visibility="gone" >
+    	   
+		    	 <EditText
+		    	    android:id="@+id/YourMessage"
+		    	    android:layout_width="300dp"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_gravity="center_vertical|top"
+		    	    android:background="@drawable/msg_out_bg"
+		    	    android:gravity="top|left"
+		    	    android:layout_marginLeft="10dp"
+		    	    android:layout_marginRight="10dp"
+		    	    android:hint="Your message..."
+		    	    android:inputType="textMultiLine"
+		    	    android:maxLength="100"
+		    	    android:textColor="@color/text_black"
+		    	    android:textColorHint="@color/text_hint_color_light_gray"
+		    	    android:padding="10dp"
+		    	    android:textSize="13sp"
+		    	    android:typeface="sans">
+		    	</EditText>
+    	 </ScrollView>
+
+
+    	   
+    	 
+    </LinearLayout> 
+    </ScrollView>
+          	<!--  <LinearLayout
+                android:id="@+id/WrappedViewTwo"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dip"
+   		   	    android:layout_marginRight="10dip"
+   		   	    android:layout_marginBottom="20dip"
+   		   	    android:layout_below="@+id/WrapView"
+                android:orientation="vertical"
+                android:visibility="gone">
+    	  
+             
+
+		 		<ListView
+   		   	    	android:id="@+id/gmailContactInbox"
+   		   	    	android:layout_width="fill_parent"
+   		   	    	android:layout_height="fill_parent"
+   		   	    	android:divider="#c6c6c6"
+   		   	    	android:layout_marginLeft="10dp"
+					android:layout_marginRight="10dp"
+   		   	        android:dividerHeight="1dp"
+   		   	    	android:background="#00000000"
+   		   	    	android:scrollbarStyle="insideOverlay">
+   		   		</ListView>
+   		   		
+   		   		 <TextView 
+					android:layout_width="match_parent" 
+					android:layout_height="1dip"
+					android:layout_marginLeft="10dp"
+					android:layout_marginRight="10dp"
+					android:id="@+id/bottomline"
+					android:background="#c6c6c6">
+  	         </TextView>
+		 		
+   		  </LinearLayout> 
+   		  -->
+   		    <RelativeLayout android:layout_width="fill_parent" 
+		        android:id="@+id/bottomButtonsLayout" 
+		        android:background="#00000000"
+		        android:gravity="center" 
+		        android:layout_height="50dip" 
+		        android:layout_alignParentBottom="true"
+		        android:orientation="horizontal">
+					<Button
+						android:id="@+id/submitButton"
+						android:layout_width="42dp"
+						android:layout_height="42dp"
+						android:background="@drawable/submit_icon"
+						android:layout_centerVertical="true"
+						android:textSize="20sp"
+						android:typeface="sans"
+						android:layout_centerHorizontal="true"
+						android:textColor="@color/white"
+						android:visibility="gone">
+					</Button>
+
+		   </RelativeLayout>
+   		  
+	</RelativeLayout>  
+	
+	
